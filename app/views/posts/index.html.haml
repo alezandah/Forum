@@ -1,1 +1,8 @@
-%h1 This is the index placeholder Text
+- @posts.each do |post|
+  %h1= post.title
+  %p
+    published
+    =time_ago_in_words(post.created_at)
+    ago
+=link_to 'New Post', new_post_path
+
